@@ -1,0 +1,269 @@
+$primary-color : #9356DC;
+$secondary-color : #FF79DA;
+$tertiary-color: #99E2D0;
+$footer-color : #353535;
+
+@mixin reset-margin-padding {
+    padding: 0;
+    margin: 0;    
+}
+@mixin flex-col-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@mixin flex-row-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+@mixin section-heading {
+    display: flex;
+    align-self: flex-start;
+    padding-bottom: 3.0rem;
+}
+@mixin fade-in($time) {
+    animation: fadein $time;
+    @keyframes fadein {
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
+        }
+    }
+}
+@mixin slide-in($delay) {
+    position: absolute;
+    left: -100vw;
+    animation: slide 0.5s forwards;
+    animation-delay: $delay;
+    @-webkit-keyframes slide {
+        100% { left: 0; }
+    }
+    @keyframes slide {
+        100% { left: 0; }
+    }
+}
+/*---Doc-settings-----------------------*/
+html {
+    font-size: 62.5%; /* now 1.0rem = 10px */
+}
+body{
+    @include slide-in(1s);
+    margin: 0;
+    width: 100vw; /* body 100% wide */
+    font-family: 'Roboto', sans-serif;
+}
+header, main, footer{
+    @include reset-margin-padding();
+}
+/*---Text-settings-----------------------*/
+h1{
+    @include reset-margin-padding();
+    @include flex-col-center();
+    font-size: 3.2rem;
+    font-family: 'Shrikhand', cursive;
+}
+h2{
+    @include reset-margin-padding();
+    @include flex-col-center();
+    font-size: 2.4rem;
+}
+p, span{
+    font-size: 1.6rem;
+}
+
+/*-------------------------------*/
+
+#heading{
+    margin-top: 1.0rem;
+    margin-bottom: 0.8rem;
+    img{
+        width: 80%;
+    }
+}
+#location{
+    @include flex-row-center();
+    box-shadow: inset 0rem 0.2rem 0.2rem #CECECE;
+    background-color: #EAEAEA;
+    font-weight: bold;
+    font-size: 1.6rem;
+    width: 100vw;
+    height: 5.0rem;
+    span{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+#explore-menu{
+    width: 100vw;
+    background-color: #F6F6F6;
+    text-align: center;
+    @include flex-col-center();
+    h2{
+        width: 75%;
+        margin-top: 3rem;
+    }
+    &__Button{
+        border: none;
+        outline: none;
+        background: linear-gradient(to bottom right, $secondary-color,$primary-color );
+        color: white;
+        font-weight:500;
+        font-size: 1.5rem;
+        padding: 1.5rem;
+        border-radius: 3.0rem;
+        margin-bottom: 4rem;
+        &:hover{
+            transition-duration: 0.5s;
+            box-shadow: 0.0rem 0.0rem 1.0rem $primary-color;
+            background: linear-gradient(to bottom right, $primary-color, $secondary-color );
+        }
+        &:focus{
+            border: none;
+        }
+    }
+}
+
+#how-to-use-it{
+    @include flex-col-center();
+    padding-left: 2.0rem;
+    padding-top: 3.0rem;
+    margin-bottom: 3.0rem;
+    
+    h2{
+        @include section-heading();
+    }
+    .rule-of-use{
+        display: flex;
+        flex-flow: row nowrap;
+        align-content: baseline;
+        width: 85%;
+        border-radius: 2.5rem;
+        padding: 2.0rem 2.0rem 2.0rem 0rem;
+        margin-bottom: 3.0rem;
+        background-color: #F6F6F6;
+        box-shadow: 0px 6px 12px #d9d9d9;
+        align-items: baseline;
+        &:hover{
+            background-color: #F5EDFF;
+            
+        }
+        &__number{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            background-color: $primary-color;
+            color: white;             
+            width: 1.0rem;
+            height: 1.0rem;
+            padding: 1.0rem;
+            margin-left: -2.0rem;
+            margin-right: 2.0rem;
+            border-radius: 2.2rem;
+            line-height:0.9rem;
+        }
+        &__icon{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            margin-right: 2rem;
+            color: #7E7E7E;
+        }
+        &__text{
+            font-weight: bold;
+        }      
+    }
+}
+#restaurant-presentation{
+    @include flex-col-center();
+    padding-top: 3rem;
+    padding-bottom: 5rem ;
+    background-color: #F6F6F6;
+    h2{
+        @include section-heading();
+        padding-left: 2.0rem;
+    }
+}
+.presentation-card{
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    width: 90%;
+    min-height: 20rem;
+    max-height: 50rem;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0px 6px 12px #d9d9d9;
+    &__picture{
+        display: flex;
+        flex-direction: row;
+        height: 70%;
+        overflow: hidden;
+        img{
+            max-height: 20rem;
+            min-width: 100%;
+            object-fit: cover;
+        }
+        &--novelty{
+            padding: 0.7rem;
+            color: #008766;
+            background-color: #99E2D0;
+            border-radius: 0.3rem;
+            width: fit-content;
+            height: fit-content;
+            position: relative;
+            top: 1.5rem; right: 9rem;
+        }
+
+    }
+    &__footer{
+        height: 30%;
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        &__text{
+            display: flex;
+            flex-flow: column;
+            margin: 4% 0% 4% 4%;
+            width: 96%;
+            span:first-child{
+                font-weight: bold;
+            }
+        }
+        &__like-button{
+            @include flex-col-center();
+            width: 20%;
+            min-height: 100%;
+            span{
+                font-size: 2.2rem;
+                &:hover{
+                    color: red;
+                }  
+            }
+
+        }
+
+    }
+
+}
+footer{
+    background-color: $footer-color;
+    color: white;
+    font-size: 1.6rem;
+    padding: 2.0rem;
+    span{
+        font-family: 'Shrikhand', cursive;
+        font-size: 1.8rem;
+    }
+    ul{
+        @include reset-margin-padding();
+        list-style: none;
+        margin-top: 2.0rem;
+        line-height: 2.3rem;
+    }
+}
