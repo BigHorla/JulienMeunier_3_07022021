@@ -1,0 +1,110 @@
+/* Objects --- list items are sorted alphabetically */
+/* -------------------------------------------------*/
+/* VARIABLES ---------------------------------------*/
+/* colors */
+$background-lightgrey-color :#F6F6F6;
+$footer-color : #353535;
+$primary-color : #9356DC;
+$secondary-color : #FF79DA;
+$tertiary-color: #99E2D0;
+/* animation */
+$fadein-interval : 0.2s;
+$fadein-start-delay : 1.5s;
+$fadein-time : 1s;
+/* -------------------------------------------------*/
+/* FUNCTIONS ---------------------------------------*/
+/* ----------------------------------------------*/
+@function fadinInDelay($step){
+    $delayForThisStep : $fadein-start-delay+($fadein-interval * ($step - 1));
+    @return $delayForThisStep;   
+}
+/* -------------------------------------------------*/
+/* ANIMATIONS --------------------------------------*/
+/* ----------------------------------------------*/
+@keyframes fade_in {
+    0%   { opacity: 0; transform: scale(1,0);}
+    50%   { opacity: 0.5; transform: scale(1,1);}
+    100% { opacity: 1; transform: scale(1,1);} 
+}
+@keyframes loaderAnimation {
+    0%   {transform: scale(1) translate(0,0);}
+    33% {transform: scale(1.9) translate(0,-5rem) rotate(-90deg);}
+    66%   {transform: scale(1.9) translate(0,0) rotate(-90deg);}
+    100%  {transform: scale(1) translate(0,0) rotate(90deg);}
+}
+@keyframes loaderEnd {
+    from {
+        opacity:1;
+    }
+    to {
+        opacity:0;
+    }
+}
+@keyframes shake {
+    0% {transform: rotate(5deg);}
+    50% {transform: rotate(-5deg);}
+    100% {transform: rotate(5deg);}
+}
+@keyframes slide {
+    0%   {height: 0rem;}    
+    99% {height: 30rem;} 
+    100%{height: auto;}
+}
+@keyframes waitForDisplay {
+    0%   {opacity: 0;}
+    100%  {opacity: 1;}
+}
+/* -------------------------------------------------*/
+/* MIXINS ----------------------------------------*/
+/* ----------------------------------------------*/
+@mixin fade-in($delay) {
+    animation: fadein 1s;
+    animation-delay: $delay;
+    @keyframes fadein {
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
+        }
+    }
+}
+@mixin fadeInSettings($nb) {
+    opacity: 0;
+    animation: fade_in $fadein-time;
+    animation-fill-mode: forwards;
+    animation-delay: fadinInDelay($nb);
+}
+@mixin flex-col-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@mixin flex-row-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+@mixin reset-margin-padding {
+    padding: 0;
+    margin: 0;    
+}
+@mixin section-heading {
+    display: flex;
+    align-self: flex-start;
+    padding-bottom: 3.0rem;
+}
+@mixin slide-in($delay) {
+    position: absolute;
+    left: -100vw;
+    animation: slide 0.5s forwards;
+    animation-delay: $delay;
+    @-webkit-keyframes slide {
+        100% { left: 0; }
+    }
+    @keyframes slide {
+        100% { left: 0; }
+    }
+}

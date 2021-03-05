@@ -1,57 +1,11 @@
 @import "restaurant_pages";
-@import "variables";
-
-
-@mixin reset-margin-padding {
-    padding: 0;
-    margin: 0;    
-}
-@mixin flex-col-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-@mixin flex-row-center {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-@mixin section-heading {
-    display: flex;
-    align-self: flex-start;
-    padding-bottom: 3.0rem;
-}
-@mixin fade-in($delay) {
-    animation: fadein 1s;
-    animation-delay: $delay;
-    @keyframes fadein {
-        from {
-            opacity:0;
-        }
-        to {
-            opacity:1;
-        }
-    }
-}
-@mixin slide-in($delay) {
-    position: absolute;
-    left: -100vw;
-    animation: slide 0.5s forwards;
-    animation-delay: $delay;
-    @-webkit-keyframes slide {
-        100% { left: 0; }
-    }
-    @keyframes slide {
-        100% { left: 0; }
-    }
-}
+@import "objects";
 /*---Doc-settings-----------------------*/
 html {
     font-size: 62.5%; /* now 1.0rem = 10px */
 }
 body{
+    
     margin: 0;
     width: 100vw; /* body 100% wide */
     font-family: 'Roboto', sans-serif;
@@ -75,14 +29,42 @@ h2{
     @include flex-col-center();
     font-size: 2.4rem;
 }
+h4{
+    @include reset-margin-padding();
+}
 p, span{
     font-size: 1.6rem;
 }
 
 /*-------------------------------*/
 
+.like-btn{
+    position: relative;
+    align-self: center;
+    margin-right: 2.5rem;
+    width: fit-content;
+    height: fit-content;
+    font-size: 2.5rem;   
+    background: none;
+    background-position: center;
+    background-size: 0.1rem;
+    transition-duration: 0.4s;
+    > *{
+        transition-duration: 0.4s; 
+        transition-delay: 0.4s;
+    }
+    &:hover{
+        background: no-repeat url("images/coeur.png");
+        background-position: center;
+        background-size: 2.5rem;
+    }
+    &:hover > *{
+        opacity: 0;
+    }
+    
+}
 #header__heading{
-    margin-top: 1.0rem;
+    padding-top: 1.0rem;
     margin-bottom: 0.8rem;
     img{
         width: 80%;
@@ -129,9 +111,9 @@ p, span{
         border-radius: 3.0rem;
         margin-bottom: 4rem;
         &:hover{
-            transition-duration: 0.5s;
-            box-shadow: 0.0rem 0.0rem 1.0rem $primary-color;
-            background: linear-gradient(to bottom right, $primary-color, $secondary-color );
+            transition-duration: 0.4s;
+            box-shadow: 0.0rem 0.0rem 0.5rem darken($primary-color,20%);
+            background: linear-gradient(to bottom right, lighten($secondary-color,3%),lighten($primary-color,3%));
         }
         &:focus{
             border: none;
@@ -199,6 +181,7 @@ p, span{
         padding-left: 2.0rem;
     }
 }
+
 .presentation-card{
     display: flex;
     flex-direction: column;
@@ -209,6 +192,17 @@ p, span{
     margin-bottom: 1.5rem;
     overflow: hidden;
     box-shadow: 0px 6px 12px #d9d9d9;
+    transition-duration: 0.4s;
+    &:hover{
+        transform: scale(1.05);
+    }
+    &:hover > &__picture img{
+        filter: contrast(110%);
+    }
+    &:hover &__picture--novelty {
+        animation: shake 1s linear infinite;
+        font-weight: bold;
+    }
     &__picture{
         display: flex;
         flex-direction: row;
@@ -245,19 +239,6 @@ p, span{
                 font-weight: bold;
             }
         }
-        &__like-button{
-            @include flex-col-center();
-            width: 20%;
-            min-height: 100%;
-            span{
-                font-size: 2.2rem;
-                &:hover{
-                    color: red;
-                }  
-            }
-
-        }
-
     }
 
 }
@@ -276,6 +257,49 @@ footer{
         margin-top: 2.0rem;
         line-height: 2.3rem;
     }
+    a{
+        color: white;
+    }  
 }
-
+.loader{
+    position: absolute;
+    background: $background-lightgrey-color;
+    animation: loaderEnd 1s 3s forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+    width: 100vw;
+    &__animation{
+        display: flex;
+        flex-direction: row;
+        &__box{
+            height: 5vw;
+            width: 5vw;
+            margin: 2.5vw;
+            transform: scale(1);
+            border-radius: 0.5rem;
+            animation: loaderAnimation 2s infinite;
+            &--1{
+                background-color: $primary-color;
+                animation-delay: 0s;
+            }
+            &--2{
+                background-color: $secondary-color;
+                animation-delay: 0.3s;
+            }
+            &--3{
+                background-color: $tertiary-color;
+                animation-delay: 0.5s;
+            }
+         }
+    }
+}
+.content{
+    
+    opacity: 0;
+    animation: waitForDisplay 3s 4s forwards;
+}
 

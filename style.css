@@ -1,7 +1,14 @@
-/* COLORS ---------------------------------------*/
-/* ANIMATION -----------------------------------*/
-/* second */
-/* second */
+/* Objects --- list items are sorted alphabetically */
+/* -------------------------------------------------*/
+/* VARIABLES ---------------------------------------*/
+/* colors */
+/* animation */
+/* -------------------------------------------------*/
+/* FUNCTIONS ---------------------------------------*/
+/* ----------------------------------------------*/
+/* -------------------------------------------------*/
+/* ANIMATIONS --------------------------------------*/
+/* ----------------------------------------------*/
 @-webkit-keyframes fade_in {
   0% {
     opacity: 0;
@@ -30,101 +37,203 @@
     transform: scale(1, 1);
   }
 }
-@-webkit-keyframes slide {
+@-webkit-keyframes loaderAnimation {
   0% {
-    transform: scale(1, 0);
+    transform: scale(1) translate(0, 0);
+  }
+  33% {
+    transform: scale(1.9) translate(0, -5rem) rotate(-90deg);
+  }
+  66% {
+    transform: scale(1.9) translate(0, 0) rotate(-90deg);
   }
   100% {
-    transform: scale(1, 1);
+    transform: scale(1) translate(0, 0) rotate(90deg);
+  }
+}
+@keyframes loaderAnimation {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  33% {
+    transform: scale(1.9) translate(0, -5rem) rotate(-90deg);
+  }
+  66% {
+    transform: scale(1.9) translate(0, 0) rotate(-90deg);
+  }
+  100% {
+    transform: scale(1) translate(0, 0) rotate(90deg);
+  }
+}
+@-webkit-keyframes loaderEnd {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes loaderEnd {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes shake {
+  0% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+@keyframes shake {
+  0% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    height: 0rem;
+  }
+  99% {
+    height: 30rem;
+  }
+  100% {
+    height: auto;
   }
 }
 @keyframes slide {
   0% {
-    transform: scale(1, 0);
+    height: 0rem;
+  }
+  99% {
+    height: 30rem;
   }
   100% {
-    transform: scale(1, 1);
+    height: auto;
   }
 }
+@-webkit-keyframes waitForDisplay {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes waitForDisplay {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* -------------------------------------------------*/
+/* MIXINS ----------------------------------------*/
+/* ----------------------------------------------*/
+/*--Animations------------------------------------------------------*/
+/*--items fade in------------------------------------------------------*/
 .fade-in--delay_1 {
+  opacity: 0;
   -webkit-animation: fade_in 1s;
           animation: fade_in 1s;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 
 .fade-in--delay_2 {
+  opacity: 0;
   -webkit-animation: fade_in 1s;
           animation: fade_in 1s;
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-delay: 1.7s;
+          animation-delay: 1.7s;
 }
 
 .fade-in--delay_3 {
+  opacity: 0;
   -webkit-animation: fade_in 1s;
           animation: fade_in 1s;
-  -webkit-animation-delay: 1.4s;
-          animation-delay: 1.4s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-delay: 1.9s;
+          animation-delay: 1.9s;
 }
 
 .fade-in--delay_4 {
+  opacity: 0;
   -webkit-animation: fade_in 1s;
           animation: fade_in 1s;
-  -webkit-animation-delay: 1.6s;
-          animation-delay: 1.6s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s;
 }
 
 .fade-in--delay_5 {
+  opacity: 0;
   -webkit-animation: fade_in 1s;
           animation: fade_in 1s;
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-delay: 2.3s;
+          animation-delay: 2.3s;
 }
 
 .fade-in--delay_6 {
+  opacity: 0;
   -webkit-animation: fade_in 1s;
           animation: fade_in 1s;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
 }
 
 .fade-in--delay_7 {
+  opacity: 0;
   -webkit-animation: fade_in 1s;
           animation: fade_in 1s;
-  -webkit-animation-delay: 2.2s;
-          animation-delay: 2.2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-delay: 2.7s;
+          animation-delay: 2.7s;
 }
 
 .fade-in--delay_8 {
+  opacity: 0;
   -webkit-animation: fade_in 1s;
           animation: fade_in 1s;
-  -webkit-animation-delay: 2.4s;
-          animation-delay: 2.4s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-delay: 2.9s;
+          animation-delay: 2.9s;
 }
 
 .fade-in--delay_9 {
+  opacity: 0;
   -webkit-animation: fade_in 1s;
           animation: fade_in 1s;
-  -webkit-animation-delay: 2.6s;
-          animation-delay: 2.6s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-delay: 3.1s;
+          animation-delay: 3.1s;
 }
 
 .restaurant-picture__image {
@@ -146,7 +255,7 @@
   align-items: baseline;
   background-color: #F6F6F6;
   border-radius: 3rem 3rem 0 0;
-  padding: 2rem 2rem 0rem 2rem;
+  padding: 2rem 2rem 2rem 2rem;
   margin-top: -3rem;
 }
 .restaurant-picture__header h2 {
@@ -162,13 +271,27 @@
   padding-left: 2rem;
   padding-bottom: 4rem;
 }
+.menu__slider {
+  height: 0rem;
+  -webkit-animation: slide 1.5s;
+          animation: slide 1.5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.menu__slider:last-child {
+  margin-bottom: 4rem;
+}
 .menu__section {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .menu__section__heading {
-  margin-top: 3rem;
+  margin: 0;
+  font-weight: normal;
+  font-size: 1.6rem;
 }
 .menu__section__separator {
   height: 0.3rem;
@@ -184,7 +307,6 @@
 }
 
 .dish-choice {
-  opacity: 0;
   background-color: white;
   display: flex;
   flex-flow: row nowrap;
@@ -195,14 +317,12 @@
   overflow: hidden;
   margin-bottom: 1.5rem;
   transform-origin: bottom;
-  width: 90vw;
-  /* <---------------------------------*/
-}
-.dish-choice:last-child {
-  margin-bottom: 4rem;
+  min-width: 90vw;
+  max-width: 90vw;
 }
 .dish-choice__txt {
   min-width: 70vw;
+  max-width: 70vw;
   margin: 1rem 0 1rem 1rem;
   display: flex;
   flex-direction: column;
@@ -215,22 +335,31 @@
   text-overflow: ellipsis;
 }
 .dish-choice__txt__heading {
+  display: flex;
+  flex-flow: row nowrap;
   font-weight: bold;
   font-size: 1.8rem;
+  overflow: visible;
+  white-space: nowrap;
 }
 .dish-choice__txt__info {
   font-size: 1.5rem;
 }
 .dish-choice__price {
   display: flex;
+  background: transparent;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-start;
+  align-items: center;
   font-weight: bold;
   padding: 1rem;
-  min-width: 15vw;
+  padding-left: 0;
+  min-width: 15.5vw;
+  max-width: 15.5vw;
   padding-bottom: 1rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  position: relative;
+  z-index: -1;
 }
 .dish-choice:hover .dish-choice__txt {
   min-width: 50vw;
@@ -238,27 +367,105 @@
 .dish-choice__selected {
   background-color: #99E2D0;
   color: white;
-  width: 20rem;
+  max-width: 20vw;
+  min-width: 20vw;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   transform-origin: right;
   transition-duration: 1s;
+  font-size: 2.3rem;
+  margin-left: 0.2rem;
 }
-.dish-choice__selected span {
-  font-size: 2rem;
+.dish-choice__selected__icon {
   transform: rotate(-180deg);
   transition: transform 0.4s;
 }
-.dish-choice:hover .dish-choice__selected > span {
+.dish-choice:hover .dish-choice__selected__icon {
   transform: rotate(0deg);
 }
 
-/* COLORS ---------------------------------------*/
-/* ANIMATION -----------------------------------*/
-/* second */
-/* second */
+/* Objects --- list items are sorted alphabetically */
+/* -------------------------------------------------*/
+/* VARIABLES ---------------------------------------*/
+/* colors */
+/* animation */
+/* -------------------------------------------------*/
+/* FUNCTIONS ---------------------------------------*/
+/* ----------------------------------------------*/
+/* -------------------------------------------------*/
+/* ANIMATIONS --------------------------------------*/
+/* ----------------------------------------------*/
+@keyframes fade_in {
+  0% {
+    opacity: 0;
+    transform: scale(1, 0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+@keyframes loaderAnimation {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  33% {
+    transform: scale(1.9) translate(0, -5rem) rotate(-90deg);
+  }
+  66% {
+    transform: scale(1.9) translate(0, 0) rotate(-90deg);
+  }
+  100% {
+    transform: scale(1) translate(0, 0) rotate(90deg);
+  }
+}
+@keyframes loaderEnd {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes shake {
+  0% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+@keyframes slide {
+  0% {
+    height: 0rem;
+  }
+  99% {
+    height: 30rem;
+  }
+  100% {
+    height: auto;
+  }
+}
+@keyframes waitForDisplay {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* -------------------------------------------------*/
+/* MIXINS ----------------------------------------*/
+/* ----------------------------------------------*/
 /*---Doc-settings-----------------------*/
 html {
   font-size: 62.5%;
@@ -304,13 +511,47 @@ h2 {
   font-size: 2.4rem;
 }
 
+h4 {
+  padding: 0;
+  margin: 0;
+}
+
 p, span {
   font-size: 1.6rem;
 }
 
 /*-------------------------------*/
+.like-btn {
+  position: relative;
+  align-self: center;
+  margin-right: 2.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 2.5rem;
+  background: none;
+  background-position: center;
+  background-size: 0.1rem;
+  transition-duration: 0.4s;
+}
+.like-btn > * {
+  transition-duration: 0.4s;
+  transition-delay: 0.4s;
+}
+.like-btn:hover {
+  background: no-repeat url("images/coeur.png");
+  background-position: center;
+  background-size: 2.5rem;
+}
+.like-btn:hover > * {
+  opacity: 0;
+}
+
 #header__heading {
-  margin-top: 1rem;
+  padding-top: 1rem;
   margin-bottom: 0.8rem;
 }
 #header__heading img {
@@ -367,9 +608,9 @@ p, span {
   margin-bottom: 4rem;
 }
 #explore-menu__Button:hover {
-  transition-duration: 0.5s;
-  box-shadow: 0rem 0rem 1rem #9356DC;
-  background: linear-gradient(to bottom right, #9356DC, #FF79DA);
+  transition-duration: 0.4s;
+  box-shadow: 0rem 0rem 0.5rem #6023a9;
+  background: linear-gradient(to bottom right, #ff88de, #9b63df);
 }
 #explore-menu__Button:focus {
   border: none;
@@ -455,6 +696,18 @@ p, span {
   margin-bottom: 1.5rem;
   overflow: hidden;
   box-shadow: 0px 6px 12px #d9d9d9;
+  transition-duration: 0.4s;
+}
+.presentation-card:hover {
+  transform: scale(1.05);
+}
+.presentation-card:hover > .presentation-card__picture img {
+  filter: contrast(110%);
+}
+.presentation-card:hover .presentation-card__picture--novelty {
+  -webkit-animation: shake 1s linear infinite;
+          animation: shake 1s linear infinite;
+  font-weight: bold;
 }
 .presentation-card__picture {
   display: flex;
@@ -498,20 +751,6 @@ p, span {
 .presentation-card__footer__text span:first-child {
   font-weight: bold;
 }
-.presentation-card__footer__like-button {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 20%;
-  min-height: 100%;
-}
-.presentation-card__footer__like-button span {
-  font-size: 2.2rem;
-}
-.presentation-card__footer__like-button span:hover {
-  color: red;
-}
 
 footer {
   background-color: #353535;
@@ -529,4 +768,55 @@ footer ul {
   list-style: none;
   margin-top: 2rem;
   line-height: 2.3rem;
+}
+footer a {
+  color: white;
+}
+
+.loader {
+  position: absolute;
+  background: #F6F6F6;
+  -webkit-animation: loaderEnd 1s 3s forwards;
+          animation: loaderEnd 1s 3s forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+.loader__animation {
+  display: flex;
+  flex-direction: row;
+}
+.loader__animation__box {
+  height: 5vw;
+  width: 5vw;
+  margin: 2.5vw;
+  transform: scale(1);
+  border-radius: 0.5rem;
+  -webkit-animation: loaderAnimation 2s infinite;
+          animation: loaderAnimation 2s infinite;
+}
+.loader__animation__box--1 {
+  background-color: #9356DC;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.loader__animation__box--2 {
+  background-color: #FF79DA;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.loader__animation__box--3 {
+  background-color: #99E2D0;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.content {
+  opacity: 0;
+  -webkit-animation: waitForDisplay 3s 4s forwards;
+          animation: waitForDisplay 3s 4s forwards;
 }/*# sourceMappingURL=style.css.map */
