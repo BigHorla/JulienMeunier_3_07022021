@@ -1,7 +1,8 @@
+/* Objects --- list items are sorted alphabetically */
 /* -------------------------------------------------*/
 /* VARIABLES ---------------------------------------*/
 /* colors */
-/* animation variable for Dishes */
+/* animation */
 /* -------------------------------------------------*/
 /* FUNCTIONS ---------------------------------------*/
 /* ----------------------------------------------*/
@@ -106,16 +107,22 @@
   0% {
     height: 0rem;
   }
-  100% {
+  99% {
     height: 30rem;
+  }
+  100% {
+    height: auto;
   }
 }
 @keyframes slide {
   0% {
     height: 0rem;
   }
-  100% {
+  99% {
     height: 30rem;
+  }
+  100% {
+    height: auto;
   }
 }
 @-webkit-keyframes waitForDisplay {
@@ -235,7 +242,7 @@
   overflow: hidden;
 }
 .restaurant-picture img {
-  width: 100vw;
+  width: 100%;
   max-height: 30rem;
   -o-object-fit: cover;
      object-fit: cover;
@@ -262,6 +269,7 @@
 .menu {
   background-color: #F6F6F6;
   padding-left: 2rem;
+  padding-right: 2rem;
   padding-bottom: 4rem;
 }
 .menu__slider {
@@ -307,15 +315,15 @@
   margin-right: 2rem;
   border-radius: 2rem;
   box-shadow: 0px 6px 12px #d9d9d9;
-  overflow: hidden;
   margin-bottom: 1.5rem;
   transform-origin: bottom;
-  min-width: 90vw;
-  max-width: 90vw;
+  min-width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 .dish-choice__txt {
-  min-width: 70vw;
-  max-width: 70vw;
+  min-width: 86%;
+  max-width: 86%;
   margin: 1rem 0 1rem 1rem;
   display: flex;
   flex-direction: column;
@@ -347,21 +355,21 @@
   font-weight: bold;
   padding: 1rem;
   padding-left: 0;
-  min-width: 15.5vw;
-  max-width: 15.5vw;
+  min-width: 8%;
+  max-width: 8%;
   padding-bottom: 1rem;
   font-size: 1.8rem;
   position: relative;
   z-index: -1;
 }
 .dish-choice:hover .dish-choice__txt {
-  min-width: 50vw;
+  min-width: 68%;
 }
 .dish-choice__selected {
   background-color: #99E2D0;
   color: white;
-  max-width: 20vw;
-  min-width: 20vw;
+  max-width: 20%;
+  min-width: 20%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -370,10 +378,14 @@
   transition-duration: 1s;
   font-size: 2.3rem;
   margin-left: 0.2rem;
+  display: none;
 }
 .dish-choice__selected__icon {
   transform: rotate(-180deg);
-  transition: transform 0.4s;
+  transition: transform 0.6s ease-out;
+}
+.dish-choice:hover .dish-choice__selected {
+  display: inherit;
 }
 .dish-choice:hover .dish-choice__selected__icon {
   transform: rotate(0deg);
