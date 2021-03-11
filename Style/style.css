@@ -674,7 +674,7 @@ p, span {
   transition-delay: 0.4s;
 }
 .like-btn:hover {
-  background: no-repeat url("images/coeur.png");
+  background: no-repeat url("../images/coeur.png");
   background-position: center;
   background-size: 2.5rem;
 }
