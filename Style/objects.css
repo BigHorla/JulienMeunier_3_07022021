@@ -71,7 +71,6 @@
   }
   to {
     opacity: 0;
-    display: none;
   }
 }
 @keyframes loaderEnd {
@@ -80,7 +79,6 @@
   }
   to {
     opacity: 0;
-    display: none;
   }
 }
 @-webkit-keyframes shake {
