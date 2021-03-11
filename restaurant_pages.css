@@ -144,7 +144,6 @@
 /* -------------------------------------------------*/
 /* MIXINS ----------------------------------------*/
 /* ----------------------------------------------*/
-/*--Animations------------------------------------------------------*/
 /*--items fade in------------------------------------------------------*/
 .fade-in--delay_1 {
   opacity: 0;
@@ -236,9 +235,37 @@
           animation-delay: 3.1s;
 }
 
+@media screen and (max-width: 360px) {
+  .restaurant-content {
+    background: white;
+    border: 1px solid #F6F6F6;
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 361px) and (max-width: 700px) {
+  .restaurant-content {
+    background: white;
+    max-width: 480px;
+    margin: 0 auto;
+    border: 1px solid #F6F6F6;
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 701px) {
+  .restaurant-content {
+    background: white;
+    margin-top: 5%;
+    max-height: 81vh;
+    max-width: 480px;
+    overflow: scroll;
+    margin: 0 auto;
+    border: 1vh solid #222222;
+    opacity: 1;
+  }
+}
 .restaurant-picture__image {
   position: relative;
-  z-index: -1;
+  z-index: 0;
   overflow: hidden;
 }
 .restaurant-picture img {
@@ -249,10 +276,12 @@
   overflow: hidden;
 }
 .restaurant-picture__header {
+  position: relative;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: baseline;
+  z-index: 1;
   background-color: #F6F6F6;
   border-radius: 3rem 3rem 0 0;
   padding: 2rem 2rem 2rem 2rem;
@@ -377,8 +406,7 @@
   transform-origin: right;
   transition-duration: 1s;
   font-size: 2.3rem;
-  margin-left: 0.2rem;
-  display: none;
+  margin-left: 1rem;
 }
 .dish-choice__selected__icon {
   transform: rotate(-180deg);
@@ -386,6 +414,7 @@
 }
 .dish-choice:hover .dish-choice__selected {
   display: inherit;
+  margin: 0;
 }
 .dish-choice:hover .dish-choice__selected__icon {
   transform: rotate(0deg);

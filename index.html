@@ -1,23 +1,15 @@
 <!DOCTYPE html>
-<!-- Template pour début de projet rapide -->
-<html>
+<html lang="fr">
 	<head> 
-            <!-- Titre -->
             <title>Ohmyfood</title>
-            <!-- Langue -->
-            <html lang="fr">
-            <!-- Meta standarts -->
-			<meta charet="UTF-8" />
+			<meta charset="UTF-8" />
             <meta name="author" content="Julien Meunier">
-            <meta name="description" content="Template pour débuter un porjet web">
-            <!-- Intégration facebook -->
+            <meta name="description" content="Template pour débuter un porjet web">            
             <meta property="og:image" content="ImageReprésentative.png">
             <meta property="og:description" content="description de la page">
-            <meta property="og:title" content="Titre de l'encart">
-            <!-- Intégration twitter -->
+            <meta property="og:title" content="Titre de l'encart">            
             <meta name="twitter:title" content="description de la page">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-            <!-- links -->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">            
             <link rel="icon" href="favicon.png" />
 			<link rel="stylesheet" href="style.css" type="text/css" media="all">	    
             <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -35,12 +27,13 @@
             <h1>ohmyfood</h1>
         </div>
 
-        <div id="smartphone-top">
+        <div id="smartphone-top" class="wait-for-display">
             <div class="camera"></div>
             <div id="smartphone-top__speaker"></div>
             <div class="camera"></div>
         </div>
-        <div class="content">
+        <div class="content wait-for-display">
+            
             <header>
                 <div id="header__heading"><h1><strong>ohmyfood</strong></h1></div>
                 <div id="location">
@@ -83,7 +76,7 @@
     
                     <a href="la-palette-du-gout.html" class="presentation-card">
                         <div class="presentation-card__picture">
-                            <img src="images\restaurants\palette-du-gout.jpg" alt="photo d'ilustration">
+                            <img src="images/restaurants/palette-du-gout.jpg" alt="photo d'ilustration">
                             <div class="presentation-card__picture--novelty">
                                 <span>Nouveau</span>
                             </div>
@@ -101,7 +94,7 @@
     
                     <a href="la-note-enchantee.html" class="presentation-card">
                         <div class="presentation-card__picture">
-                            <img src="images\restaurants\la-note-enchantee.jpg" alt="photo d'ilustration">
+                            <img src="images/restaurants/la-note-enchantee.jpg" alt="photo d'ilustration">
                             <div class="presentation-card__picture--novelty">
                                 <span>Nouveau</span>
                             </div>
@@ -119,7 +112,7 @@
     
                     <a href="a-la-francaise.html" class="presentation-card">
                         <div class="presentation-card__picture">
-                            <img src="images\restaurants\a-la-francaise.jpg" alt="photo d'ilustration">                        
+                            <img src="images/restaurants/a-la-francaise.jpg" alt="photo d'ilustration">                        
                         </div>
                         <div class="presentation-card__footer">
                             <div class="presentation-card__footer__text">
@@ -134,7 +127,7 @@
     
                     <a href="le-delice-des-sens.html" class="presentation-card">
                         <div class="presentation-card__picture">
-                            <img src="images\restaurants\le-delice-des-sens.jpg" alt="photo d'ilustration">
+                            <img src="images/restaurants/le-delice-des-sens.jpg" alt="photo d'ilustration">
                         </div>
                         <div class="presentation-card__footer">
                             <div class="presentation-card__footer__text">
@@ -153,15 +146,15 @@
             <footer>
                 <span>ohmyfood</span>
                 <ul>
-                    <li><i class="fas fa-utensils">&nbsp;&nbsp;</i>Proposer un restaurant</li>
-                    <li><i class="fas fa-hands-helping">&nbsp;&nbsp;</i>Devenir partenaire</li>
-                    <li>Mention légales</li>
-                    <a href="mailto:contact@ohmyfood.com"><li>Contact</li></a>
+                    <li><a href="#"><i class="fas fa-utensils">&nbsp;&nbsp;</i>Proposer un restaurant</a></li>
+                    <li><a href="#"><i class="fas fa-hands-helping">&nbsp;&nbsp;</i>Devenir partenaire</a></li>
+                    <li><a href="#">Mention légales</a></li>
+                    <li><a href="mailto:contact@ohmyfood.com">Contact</a></li> 
                 </ul>
             </footer>
-            
+
         </div>
-        <div id="smartphone-bottom">
+        <div id="smartphone-bottom" class="wait-for-display">
             <div id="smartphone-bottom__button"></div>
         </div>
 

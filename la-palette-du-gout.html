@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <!-- Template pour début de projet rapide -->
-<html>
+<html lang="fr">
 	<head> 
             <!-- Titre -->
-            <title>Ohmyfood</title>
-            <!-- Langue -->
-            <html lang="fr">
-            <!-- Meta standarts -->
-			<meta charet="UTF-8" />
+            <title>Ohmyfood</title>            
+			<meta charset="UTF-8" />
             <meta name="author" content="Julien Meunier">
-            <meta name="description" content="Template pour débuter un porjet web">
-            <!-- Intégration facebook -->
+            <meta name="description" content="Template pour débuter un porjet web">            
             <meta property="og:image" content="ImageReprésentative.png">
             <meta property="og:description" content="description de la page">
             <meta property="og:title" content="Titre de l'encart">
-            <!-- Intégration twitter -->
             <meta name="twitter:title" content="description de la page">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-            <!-- links -->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="icon" href="favicon.png" />
 			<link rel="stylesheet" href="style.css" type="text/css" media="all">	    
             <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -25,131 +19,140 @@
             <script src="https://kit.fontawesome.com/f73e292c68.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
+        <div id="smartphone-top">
+            <div class="camera"></div>
+            <div id="smartphone-top__speaker"></div>
+            <div class="camera"></div>
+        </div>
+        <div class="restaurant-content">
 
-        <header>
-            <a href="index.html"><span id="header__previous"><i class="fas fa-arrow-left"></i></span></a>
-            <div id="header__heading"><h1><strong>ohmyfood</strong></h1></div>
-        </header>
-        <main>
-            <div class="restaurant-picture">
-                <div class="restaurant-picture__image"><img src="images\restaurants\palette-du-gout.jpg" alt="photo d'ilustration"></div>
-                <div class="restaurant-picture__header">
-                    <h2>La palette du goût</h2>
-                    <div class="like-btn">
-                        <i class="like-btn__icon far fa-heart"></i>
-                    </div>
-                </div>
-            </div>
-            
-            <article class="menu">
-                <div class="menu__section">
-                    <h3 class="menu__section__heading">ENTRÉES</h3>
-                    <div class="menu__section__separator"></div>
-                    <div class="menu__slider">
-                        <div class="dish-choice fade-in--delay_1">
-                            <div class="dish-choice__txt">
-                                <h4 class="dish-choice__txt__heading">Fricassée d'escargot</h4>
-                                <span class="dish-choice__txt__info">Au piment d'espelette</span>
-                            </div>
-                            <div class="dish-choice__price">25€</div>
-                            <div class="dish-choice__selected"><i class="fas fa-check-circle dish-choice__selected__icon"></i></div>
-                        </div>
-                        <div class="dish-choice fade-in--delay_2">
-                            <div class="dish-choice__txt">
-                                <h4 class="dish-choice__txt__heading">Foie gras de canard mi-cuit</h4>
-                                <span class="dish-choice__txt__info">Et ses copeaux de truffe noire</span>
-                            </div>
-                            <div class="dish-choice__price">35€</div>
-                            <div class="dish-choice__selected"><i class="fas fa-check-circle dish-choice__selected__icon"></i></div>
-                        </div>
-                        <div class="dish-choice fade-in--delay_3">
-                            <div class="dish-choice__txt">
-                                <h4 class="dish-choice__txt__heading">Oeuf au plat</h4>
-                                <span class="dish-choice__txt__info">Assaisonné à la truffe sur son lit de caviar</span>
-                            </div>
-                            <div class="dish-choice__price">20€</div>
-                            <div class="dish-choice__selected"><i class="fas fa-check-circle dish-choice__selected__icon"></i></div>
+            <header id="header">
+                <div id="header__previous"><a href="index.html"><i class="fas fa-arrow-left"></i></a></div>
+                <div id="header__heading"><h1><strong>ohmyfood</strong></h1></div>
+            </header>
+            <main>
+                <div class="restaurant-picture">
+                    <div class="restaurant-picture__image"><img src="images/restaurants/palette-du-gout.jpg" alt="photo d'ilustration"></div>
+                    <div class="restaurant-picture__header">
+                        <h2>La palette du goût</h2>
+                        <div class="like-btn">
+                            <i class="like-btn__icon far fa-heart"></i>
                         </div>
                     </div>
-                    
-                    
-                    <h3 class="menu__section__heading"><span>PLATS</span></h3>
-                    <div class="menu__section__separator"></div>
-                    <div class="menu__slider">
-                        <div class="dish-choice fade-in--delay_4">
-                            <div class="dish-choice__txt">
-                                <h4 class="dish-choice__txt__heading">Filet de boeuf aux herbes</h4>
-                                <span class="dish-choice__txt__info">Accompagné de sa ribambelle de légumes</span>
-                            </div>
-                            <div class="dish-choice__price">40€</div>
-                            <div class="dish-choice__selected"><i class="fas fa-check-circle dish-choice__selected__icon"></i></div>
-                        </div>
-                        <div class="dish-choice fade-in--delay_5">
-                            <div class="dish-choice__txt">
-                                <h4 class="dish-choice__txt__heading">Parmentier de queue de boeuf</h4>
-                                <span class="dish-choice__txt__info">À la truffe noire sur sa purée de panais</span>
-                            </div>
-                            <div class="dish-choice__price">35€</div>
-                            <div class="dish-choice__selected"><i class="fas fa-check-circle dish-choice__selected__icon"></i></div>
-                        </div>
-                        <div class="dish-choice fade-in--delay_6">
-                            <div class="dish-choice__txt">
-                                <h4 class="dish-choice__txt__heading">Filet de turbot</h4>
-                                <span class="dish-choice__txt__info">Aux agrumes</span>
-                            </div>
-                            <div class="dish-choice__price">44€</div>
-                            <div class="dish-choice__selected"><i class="fas fa-check-circle dish-choice__selected__icon"></i></div>
-                        </div>
-                    </div>
-                    
-
-                    <h3 class="menu__section__heading"><span>DESSERTS</span></h3>
-                    <div class="menu__section__separator"></div>
-                    <div class="menu__slider">
-                        <div class="dish-choice fade-in--delay_7">
-                            <div class="dish-choice__txt">
-                                <h4 class="dish-choice__txt__heading">Paris-Brest</h4>
-                                <span class="dish-choice__txt__info">Revisité</span>
-                            </div>
-                            <div class="dish-choice__price">18€</div>
-                            <div class="dish-choice__selected"><i class="fas fa-check-circle dish-choice__selected__icon"></i></div>
-                        </div>
-                        <div class="dish-choice fade-in--delay_8">
-                            <div class="dish-choice__txt">
-                                <h4 class="dish-choice__txt__heading">Macaron au chocolat d'exception</h4>
-                                <span class="dish-choice__txt__info">Et glace à la vanille de Madagascar</span>
-                            </div>
-                            <div class="dish-choice__price">22€</div>
-                            <div class="dish-choice__selected"><i class="fas fa-check-circle dish-choice__selected__icon"></i></div>
-                        </div>
-                        <div class="dish-choice fade-in--delay_9">
-                            <div class="dish-choice__txt">
-                                <h4 class="dish-choice__txt__heading">Mousse au chocolat</h4>
-                                <span class="dish-choice__txt__info">Au piment d'Espelette et à la truffe noire</span>
-                            </div>
-                            <div class="dish-choice__price">23€</div>
-                            <div class="dish-choice__selected"><i class="fas fa-check-circle dish-choice__selected__icon"></i></div>
-                        </div>
-                    </div>                    
-                </div>
-                <div class="menu__order-button fade-in--delay_9">
-                    <button id="explore-menu__Button">Commander</button>
                 </div>
                 
-            </article>
+                <article class="menu">
+                    <div class="menu__section">
+                        <h3 class="menu__section__heading">ENTRÉES</h3>
+                        <div class="menu__section__separator"></div>
+                        <div class="menu__slider">
+                            <div class="dish-choice fade-in--delay_1">
+                                <div class="dish-choice__txt">
+                                    <h4 class="dish-choice__txt__heading">Fricassée d'escargot</h4>
+                                    <span class="dish-choice__txt__info">Au piment d'espelette</span>
+                                </div>
+                                <div class="dish-choice__price">25€</div>
+                                <div class="dish-choice__selected"><i class="fas fa-check-circle dish-choice__selected__icon"></i></div>
+                            </div>
+                            <div class="dish-choice fade-in--delay_2">
+                                <div class="dish-choice__txt">
+                                    <h4 class="dish-choice__txt__heading">Foie gras de canard mi-cuit</h4>
+                                    <span class="dish-choice__txt__info">Et ses copeaux de truffe noire</span>
+                                </div>
+                                <div class="dish-choice__price">35€</div>
+                                <div class="dish-choice__selected"><i class="fas fa-check-circle dish-choice__selected__icon"></i></div>
+                            </div>
+                            <div class="dish-choice fade-in--delay_3">
+                                <div class="dish-choice__txt">
+                                    <h4 class="dish-choice__txt__heading">Oeuf au plat</h4>
+                                    <span class="dish-choice__txt__info">Assaisonné à la truffe sur son lit de caviar</span>
+                                </div>
+                                <div class="dish-choice__price">20€</div>
+                                <div class="dish-choice__selected"><i class="fas fa-check-circle dish-choice__selected__icon"></i></div>
+                            </div>
+                        </div>
+                        
+                        
+                        <h3 class="menu__section__heading"><span>PLATS</span></h3>
+                        <div class="menu__section__separator"></div>
+                        <div class="menu__slider">
+                            <div class="dish-choice fade-in--delay_4">
+                                <div class="dish-choice__txt">
+                                    <h4 class="dish-choice__txt__heading">Filet de boeuf aux herbes</h4>
+                                    <span class="dish-choice__txt__info">Accompagné de sa ribambelle de légumes</span>
+                                </div>
+                                <div class="dish-choice__price">40€</div>
+                                <div class="dish-choice__selected"><i class="fas fa-check-circle dish-choice__selected__icon"></i></div>
+                            </div>
+                            <div class="dish-choice fade-in--delay_5">
+                                <div class="dish-choice__txt">
+                                    <h4 class="dish-choice__txt__heading">Parmentier de queue de boeuf</h4>
+                                    <span class="dish-choice__txt__info">À la truffe noire sur sa purée de panais</span>
+                                </div>
+                                <div class="dish-choice__price">35€</div>
+                                <div class="dish-choice__selected"><i class="fas fa-check-circle dish-choice__selected__icon"></i></div>
+                            </div>
+                            <div class="dish-choice fade-in--delay_6">
+                                <div class="dish-choice__txt">
+                                    <h4 class="dish-choice__txt__heading">Filet de turbot</h4>
+                                    <span class="dish-choice__txt__info">Aux agrumes</span>
+                                </div>
+                                <div class="dish-choice__price">44€</div>
+                                <div class="dish-choice__selected"><i class="fas fa-check-circle dish-choice__selected__icon"></i></div>
+                            </div>
+                        </div>
+                        
+
+                        <h3 class="menu__section__heading"><span>DESSERTS</span></h3>
+                        <div class="menu__section__separator"></div>
+                        <div class="menu__slider">
+                            <div class="dish-choice fade-in--delay_7">
+                                <div class="dish-choice__txt">
+                                    <h4 class="dish-choice__txt__heading">Paris-Brest</h4>
+                                    <span class="dish-choice__txt__info">Revisité</span>
+                                </div>
+                                <div class="dish-choice__price">18€</div>
+                                <div class="dish-choice__selected"><i class="fas fa-check-circle dish-choice__selected__icon"></i></div>
+                            </div>
+                            <div class="dish-choice fade-in--delay_8">
+                                <div class="dish-choice__txt">
+                                    <h4 class="dish-choice__txt__heading">Macaron au chocolat d'exception</h4>
+                                    <span class="dish-choice__txt__info">Et glace à la vanille de Madagascar</span>
+                                </div>
+                                <div class="dish-choice__price">22€</div>
+                                <div class="dish-choice__selected"><i class="fas fa-check-circle dish-choice__selected__icon"></i></div>
+                            </div>
+                            <div class="dish-choice fade-in--delay_9">
+                                <div class="dish-choice__txt">
+                                    <h4 class="dish-choice__txt__heading">Mousse au chocolat</h4>
+                                    <span class="dish-choice__txt__info">Au piment d'Espelette et à la truffe noire</span>
+                                </div>
+                                <div class="dish-choice__price">23€</div>
+                                <div class="dish-choice__selected"><i class="fas fa-check-circle dish-choice__selected__icon"></i></div>
+                            </div>
+                        </div>                    
+                    </div>
+                    <div class="menu__order-button fade-in--delay_9">
+                        <button id="explore-menu__Button">Commander</button>
+                    </div>
+                    
+                </article>
+                </main>
+                <footer>
+                    <span>ohmyfood</span>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-utensils">&nbsp;&nbsp;</i>Proposer un restaurant</a></li>
+                        <li><a href="#"><i class="fas fa-hands-helping">&nbsp;&nbsp;</i>Devenir partenaire</a></li>
+                        <li><a href="#">Mention légales</a></li>
+                        <li><a href="mailto:contact@ohmyfood.com">Contact</a></li> 
+                    </ul>
+                </footer>
+            </div>
             
-        </div>
-        
-        </main>
-        <footer>
-            <span>ohmyfood</span>
-            <ul>
-                <li><i class="fas fa-utensils">&nbsp;&nbsp;</i>Proposer un restaurant</li>
-                <li><i class="fas fa-hands-helping">&nbsp;&nbsp;</i>Devenir partenaire</li>
-                <li>Mention légales</li>
-                <a href="mailto:contact@ohmyfood.com"><li>Contact</li></a> 
-            </ul>
-        </footer>
+            
+            <div id="smartphone-bottom">
+                <div id="smartphone-bottom__button"></div>
+            </div>
         
 	</body>
 </html>
