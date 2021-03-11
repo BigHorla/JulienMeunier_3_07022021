@@ -1,6 +1,4 @@
 @import "objects";
-/*--Animations------------------------------------------------------*/
-
 /*--items fade in------------------------------------------------------*/
 .fade-in--delay_1{
     @include fadeInSettings(1);
