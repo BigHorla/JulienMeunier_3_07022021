@@ -45,6 +45,21 @@
         
     }
 }
+@media screen and (min-width : 1200px) and (max-height : 799px){
+    html {
+        font-size: 62.5%; /* 1.0rem = 10px */
+        
+    }
+    #smartphone-top, #smartphone-bottom{
+        display: none;
+    }
+    .content{
+        background: white;
+        max-width: 580px;
+        margin: 0 auto;
+        border: 1px solid $background-lightgrey-color;
+    }
+}
 @media screen and (min-width : 1200px) and (min-height : 800px){
     .restaurant-content{
         background: white;
